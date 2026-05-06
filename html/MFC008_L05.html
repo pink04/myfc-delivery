@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- 가이드 data.js MFC008_L05 · 심의필 절차 안내 팝업 단독. 타 페이지는 partial + data-popup-target -->
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>심의필 절차 안내</title>
+
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+  </head>
+  <body class="popup-open">
+    <div class="c-modal deliberation-guide is-open" role="dialog" aria-modal="true">
+      <button type="button" class="c-modal-backdrop" data-popup-close aria-label="닫기"></button>
+      <div class="c-modal-panel">
+        <div class="c-modal-head">
+          <h2 class="c-modal-title">심의필 절차 안내</h2>
+          <button type="button" class="c-modal-close" data-popup-close aria-label="닫기"></button>
+        </div>
+        <div class="c-modal-body">
+          <div>
+            <ul class="dash-list">
+              <li>회원가입 신청이 완료되었습니다.</li>
+              <li>
+                아래 버튼에서 미리보기 화면을 열어주세요. 열린 화면을 PDF로 저장하거나 캡처해 근무 중인 보험사에 심의 요청을 진행하시면
+                됩니다.
+              </li>
+              <li>보험사에서 발급한 심의필 회신문은 <strong>로그인 후 업로드</strong>하시면 됩니다.</li>
+              <li>MyFC 관리자가 확인 후 최종 승인이 완료되며, 승인 결과는 로그인 해주시면 확인 가능합니다.</li>
+              <li>심의필 회신문 제출 전까지는 사이트에 프로필이 노출되지 않습니다.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="c-modal-foot">
+          <div class="c-modal-btns">
+            <a href="MFC008_L05_L01.html" class="btn btn-primary">심의 요청용 화면 미리보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/ui.js"></script>
+    <script src="../assets/js/popup.js"></script>
+    <script src="../assets/js/common.js"></script>
+  </body>
+</html>
