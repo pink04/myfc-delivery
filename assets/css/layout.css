@@ -91,6 +91,7 @@
   outline-offset: 2px;
   border-radius: 6px;
 }
+/* 알링 2차개발 display:none*/
 .gnb a.gnb-bell {
   display: inline-flex;
   align-items: center;
@@ -98,6 +99,7 @@
   padding: 4px;
   line-height: 0;
   color: #1e293b;
+  display: none;
 }
 .gnb a.gnb-bell .gnb-ico {
   width: 22px;
@@ -122,8 +124,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   padding: 0;
   border-radius: 50%;
   overflow: hidden;
@@ -162,28 +164,43 @@
   max-width: 1024px;
   margin: 0 auto;
   padding: 40px 24px 36px;
+}
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px 32px;
+  width: 100%;
+}
+.footer-col {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
+  min-width: 0;
 }
-.footer-top {
+.site-footer .footer-trail {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px 24px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+  width: fit-content;
+  max-width: min(100%, 36rem);
+  gap: 16px;
+}
+.site-footer .footer-trail .footer-links {
+  justify-content: flex-end;
 }
 .footer-logo {
   margin: 0;
 }
 .footer-logo-link {
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: #ffffff;
+  display: inline-block;
+  line-height: 0;
 }
-.footer-logo-link:hover {
-  color: #e2e8f0;
+.footer-logo-link img {
+  display: block;
+  height: 26px;
+}
+.footer-logo-link:hover img {
+  opacity: 0.88;
 }
 .footer-logo-link:focus-visible {
   outline: 2px solid #60a5fa;
@@ -197,7 +214,7 @@
   flex-wrap: wrap;
 }
 .footer-links a {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: #a3a3a3;
 }
@@ -216,7 +233,7 @@
 }
 .footer-info p {
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.55;
   color: #a3a3a3;
 }
@@ -257,6 +274,46 @@
   padding: 0 0.35em;
   color: #a3a3a3;
 }
+.site-footer .footer-patent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.site-footer .footer-patent-mark {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #a3a3a3;
+}
+.site-footer .footer-patent-mark img {
+  display: block;
+  width: 36px;
+  object-fit: contain;
+}
+.site-footer .footer-patent-text {
+  flex: 1;
+  min-width: min(100%, 12rem);
+}
+.site-footer .footer-patent-text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #d4d4d4;
+}
+.site-footer .footer-patent-text p + p {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
 .site-footer .copyright {
   margin: 0;
   padding-top: 4px;
@@ -269,15 +326,67 @@
     padding: 32px 16px 28px;
     gap: 20px;
   }
-  .footer-top {
-    flex-direction: column;
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  /* MO: 특허 스트립 → MyFC 로고 → 회사정보 → 저작권 → 링크 (PC는 그대로) */
+  .site-footer {
+    background-color: #000000;
+  }
+  .footer-col {
+    display: contents;
+  }
+  .site-footer .footer-trail {
+    display: contents;
+    width: auto;
+    max-width: none;
+  }
+  .site-footer .footer-patent {
+    order: 1;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-top: -32px;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: 0;
+    width: calc(100% + 32px);
+    max-width: none;
+    box-sizing: border-box;
+    padding: 16px 16px 18px;
+    background-color: #222222;
+    border-bottom: 1px solid #2a2a2a;
+  }
+  .footer-logo {
+    order: 2;
+    width: 100%;
+    padding-top: 4px;
+  }
+  .site-footer .footer-patent-mark {
     align-items: flex-start;
   }
-  .footer-links {
-    width: 100%;
-    gap: 16px 20px;
+  .site-footer .footer-patent-text {
+    flex: 1;
+    min-width: 0;
+    text-align: start;
   }
-
+  .footer-info {
+    order: 3;
+    width: 100%;
+  }
+  .copyright {
+    order: 4;
+    width: 100%;
+  }
+  .footer-links {
+    order: 5;
+    width: 100%;
+    gap: 16px 15px;
+  }
+  .site-footer .footer-trail .footer-links {
+    justify-content: flex-start;
+  }
   .footer-info-split {
     flex-direction: column;
     gap: 2px;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>재심의 알림</title>
+    <title>상담 거부 사유 보기</title>
 
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/common.css" />
@@ -12,21 +12,21 @@
     <link rel="stylesheet" href="../assets/css/content.css" />
   </head>
   <body class="popup-open">
-    <div class="c-modal notice-link is-open" role="dialog" aria-modal="true">
+    <div class="c-modal sm is-open" role="dialog" aria-modal="true">
       <button type="button" class="c-modal-backdrop" data-popup-close aria-label="닫기"></button>
       <div class="c-modal-panel">
         <div class="c-modal-head">
-          <h2 class="c-modal-title">재심의 알림</h2>
+          <h2 class="c-modal-title">상담 거부 사유</h2>
           <button type="button" class="c-modal-close" data-popup-close aria-label="닫기"></button>
         </div>
         <div class="c-modal-body">
-          <p class="modal-text">
-            심의 기간이 경과하였습니다.<br />
-            재심의를 받으셔야 됩니다.
+          <p class="c-modal-meta">
+            <time datetime="2026-03-31T18:39:23">2026.03.31 18:39:23</time>
           </p>
+          <textarea class="form-textarea" name="reject_reason" readonly rows="6">상담거부사유내용</textarea>
         </div>
         <div class="c-modal-foot">
-          <button type="button" class="btn btn-primary">심의필 정보 관리 바로가기</button>
+          <button type="button" class="btn btn-line" data-popup-close>닫기</button>
         </div>
       </div>
     </div>

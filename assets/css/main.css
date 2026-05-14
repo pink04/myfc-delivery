@@ -31,12 +31,12 @@
   top: calc(100% - 6px);
   right: 24px;
   z-index: 120;
-  width: 280px;
-  padding: 12px 16px 10px;
-  border: 1px solid #e5e7eb;
+  width: 260px;
+  padding: 16px;
+  border: 1px solid var(--border);
   border-radius: 14px;
-  background: #ffffff;
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18);
+  background: var(--bg);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
   box-sizing: border-box;
   display: none;
 }
@@ -47,57 +47,60 @@
 
 .profile-menu-summary {
   margin: 0 0 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
 }
 
 .profile-menu-summary > strong {
   display: block;
   margin: 0 0 4px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
-  color: #111827;
+  color: var(--text);
 }
 
 .profile-menu-summary > p {
   margin: 0;
-  font-size: 14px;
-  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text-sub);
 }
 
 .profile-menu > ul,
 .profile-menu-drawer > ul {
   margin: 0;
-  padding: 10px 0 0;
-  border-top: 1px solid #e5e7eb;
-}
-
-.profile-menu > ul > li + li,
-.profile-menu-drawer > ul > li + li {
-  margin-top: 4px;
+  padding: 0;
 }
 
 .profile-menu > ul a,
 .profile-menu-drawer > ul a {
   display: block;
-  padding: 8px 0;
-  font-size: 16px;
+  padding: 10px 0;
+  font-size: 15px;
   font-weight: 500;
-  color: #111827;
+  color: var(--text);
   text-decoration: none;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
-.profile-menu > ul a:hover {
-  color: #2563eb;
+.profile-menu > ul a:hover,
+.profile-menu-drawer > ul a:hover {
+  color: var(--primary);
 }
 
 .profile-menu-logout {
   display: block;
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid #e5e7eb;
-  font-size: 16px;
-  color: #6b7280;
+  margin-top: 12px;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-sub);
   text-decoration: none;
+  text-align: right;
+}
+
+.profile-menu-logout:hover {
+  color: var(--text);
 }
 
 body.profile-open {
@@ -111,8 +114,7 @@ body.profile-open {
   right: 0;
   left: 0;
   z-index: 200;
-  width: 100vw;
-  max-width: 100vw;
+  width: auto;
   height: 100dvh;
   padding: 56px 20px 22px;
   background: #ffffff;
@@ -143,6 +145,9 @@ body.profile-open {
 
 .layout-wrapper.main-page {
   font-size: 16px;
+  /* 100vw 풀블리드(.review-bleed 등)가 스크롤바 폭만큼 뷰보다 넓어져 가로 스크롤이 생기는 것 방지 */
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 /* 히어로 */
@@ -464,6 +469,8 @@ body.profile-open {
   border: 1px solid #e2e8f0;
   background: #ffffff;
   color: #1e293b;
+  cursor: pointer;
+  user-select: none;
   transition:
     border-color 0.2s ease,
     color 0.2s ease,
@@ -487,16 +494,6 @@ body.profile-open {
   align-items: center;
   gap: 10px;
 }
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  background: #eef2f7;
-  border: 1px solid #e2e8f0;
-  object-fit: cover;
-  object-position: center 89%;
-  display: block;
-}
 .profile-name {
   font-weight: 800;
   margin: 0;
@@ -518,10 +515,6 @@ body.profile-open {
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-.recommend-list .avatar {
-  width: 58px;
-  height: 58px;
 }
 .recommend-list .profile-name {
   font-size: 16px;
@@ -608,10 +601,6 @@ body.profile-open {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-.situation-banner-slide:focus-visible .situation-banner-card {
-  outline: 2px solid #2563eb;
-  outline-offset: 2px;
-}
 .situation-banner-card {
   display: flex;
   flex-direction: column;
@@ -619,7 +608,7 @@ body.profile-open {
   justify-content: center;
   text-align: center;
   box-sizing: border-box;
-  min-height: 140px;
+  min-height: 180px;
   padding: 20px 16px;
   background: #e2e8f0;
   border: 1px solid var(--border-strong);
@@ -744,18 +733,20 @@ body.profile-open {
   display: flex;
   gap: 0;
   will-change: auto;
+  align-items: flex-start;
 }
 .situation-list .situation-list-carousel .swiper-slide,
 .language-list .swiper-slide {
   height: auto;
   box-sizing: border-box;
+  align-self: flex-start;
 }
 .situation-list .situation-list-carousel .swiper-slide.list-grid,
 .language-list .swiper-slide .language-list-grid {
   width: 100%;
 }
 
-/* 고객 후기 */
+/* 고객 후기 — 풀블리드(100vw는 스크롤바 폭만큼 문서보다 넓어질 수 있음 → .layout-wrapper.main-page overflow-x: clip) */
 .review-bleed {
   width: 100vw;
   max-width: 100vw;
@@ -803,6 +794,29 @@ body.profile-open {
   line-height: 1.55;
   color: #64748b;
 }
+
+/* main 전용 HTML은 content.css를 쓰지 않는 경우가 있어, 슬라이드 안 2×2 그리드를 여기서도 정의 */
+.swiper-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  flex: 1 1 auto;
+  align-self: stretch;
+}
+
+/* 고객 후기: Swiper Grid — 모바일 rows:1·slidesPerView:1(한 장), 641px↑ 2행×4열, 가로로 슬라이드 이동 */
+.review-swiper.swiper-grid > .swiper-wrapper {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+@media (min-width: 641px) {
+  .review-swiper.swiper-grid {
+    min-height: 592px;
+  }
+}
 .review-swiper.swiper {
   position: relative;
   overflow: hidden;
@@ -818,17 +832,18 @@ body.profile-open {
 }
 .review-swiper .review-track {
   gap: 0;
-  will-change: auto;
 }
 .review-swiper .swiper-slide {
   height: auto;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
-.review-swiper .swiper-slide .review-card {
+.review-swiper .swiper-slide > .review-card {
   flex: none;
   width: 100%;
   max-width: 100%;
-  height: 100%;
+  height: auto;
   min-height: 288px;
 }
 .review-bleed .review-card {
@@ -888,7 +903,8 @@ body.profile-open {
   letter-spacing: -0.02em;
   color: #1e293b;
   flex-shrink: 0;
-  min-height: 0;
+  /* 제목 1·2줄 차이로 카드 높이가 어긋나지 않도록 2줄 분량 고정 */
+  min-height: calc(1.5em * 2);
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -904,7 +920,8 @@ body.profile-open {
   color: var(--text-sub);
   overflow-wrap: anywhere;
   word-break: keep-all;
-  min-height: 0;
+  /* 본문이 짧아도 5줄 분량 공간 확보 → 카드 높이 통일 */
+  min-height: calc(1.65em * 5);
   flex: 1 1 auto;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -998,21 +1015,11 @@ body.profile-open {
   gap: 12px;
   align-items: flex-start;
   text-decoration: none;
-  color: inherit;
+  min-height: 123px;
 }
 .language-card:focus-visible {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
-}
-.language-avatar {
-  width: 58px;
-  height: 58px;
-  border: 1px solid #e2e8f0;
-  border-radius: 999px;
-  background: #eef2f7;
-  object-fit: cover;
-  display: block;
-  flex: none;
 }
 .language-body {
   min-width: 0;
@@ -1042,6 +1049,166 @@ body.profile-open {
   align-items: center;
 }
 
+/* 메인 · 언어별 FC 슬라이드 · 광고·고객센터 문의 카드 */
+.language-card.language-promo {
+  align-items: center;
+  padding: 16px;
+}
+
+.language-promo-ico {
+  flex: none;
+  display: block;
+  box-sizing: border-box;
+  width: 70px;
+  height: 70px;
+  padding: 14px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: #eef2f7;
+  object-fit: contain;
+}
+
+.language-card.language-promo .language-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.language-card.language-promo .language-body > p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.language-card.language-promo .language-body > p:first-of-type {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.language-card.language-promo .language-body > p:nth-of-type(2) {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.language-card.language-promo .language-body > p:nth-of-type(3) {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+/* 최근 등록된 보험IN */
+.insurance-in-section .section-head {
+  margin-bottom: 10px;
+}
+.insurance-in-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.insurance-in-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  padding: 16px 16px 14px;
+  color: var(--text);
+  text-decoration: none;
+  min-height: 146px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.insurance-in-card h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  line-height: 1.38;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.insurance-in-card > p:not(.insurance-in-meta):not(.insurance-in-author) {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--text-sub);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  /* 3줄 분량 고정해 카드 높이 통일 */
+  min-height: calc(1.45em * 2);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.insurance-in-foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.insurance-in-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+.insurance-in-meta > span + span::before {
+  content: '|';
+  margin-right: 10px;
+  color: var(--border-strong);
+}
+.insurance-in-author {
+  margin: 0 !important;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-sub) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.insurance-in-author > span {
+  color: var(--primary);
+}
+.insurance-in-banner {
+  margin-top: 12px;
+}
+.insurance-in-more-bottom {
+  display: none;
+}
+.insurance-in-swiper.swiper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-width: 0;
+  padding: 2px 0;
+  box-sizing: border-box;
+}
+.insurance-in-swiper .swiper-wrapper {
+  align-items: flex-start;
+}
+.insurance-in-swiper .swiper-slide {
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+/* 슬라이드마다 카드 개수가 다를 때(예: 4 vs 3) 공통 .swiper-page-grid의 flex:1 때문에 빈 높이가 남지 않도록 */
+.insurance-in-swiper .swiper-page-grid {
+  flex: 0 1 auto;
+  align-self: stretch;
+}
+.insurance-in-swiper .swiper-slide > .insurance-in-card,
+.insurance-in-swiper .swiper-page-grid > .insurance-in-card {
+  height: 100%;
+}
 /* 반응형 */
 @media (max-width: 640px) {
   .profile-menu,
@@ -1056,7 +1223,7 @@ body.profile-open {
   .review-bleed .review-card {
     padding: 18px 16px 20px;
   }
-  .review-swiper .swiper-slide .review-card {
+  .review-swiper .swiper-slide > .review-card {
     min-height: 268px;
   }
   .review-head-spacer {
@@ -1077,9 +1244,10 @@ body.profile-open {
     max-width: 100%;
     padding-left: 16px;
     padding-right: 16px;
+    padding-bottom: 0;
   }
   .main-page > main {
-    padding: 50px 0 0;
+    padding: 36px 0 50px;
   }
   .hero,
   .hero-inner,
@@ -1282,6 +1450,79 @@ body.profile-open {
     min-width: 0;
   }
 
+  /* 보험IN · PC: 헤더에 전체보기+이전다음 / 모바일: 헤더에 이전다음만, 슬라이드 아래 전체보기 → 광고배너 */
+  .insurance-in-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 12px;
+    row-gap: 14px;
+    align-items: start;
+  }
+  .insurance-in-section > .section-head {
+    display: contents;
+  }
+  .insurance-in-section .section-head-right {
+    display: contents;
+  }
+  .insurance-in-section .section-head .section-title {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    align-self: center;
+    min-width: 0;
+    justify-self: start;
+  }
+  .insurance-in-section .control-box {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+    width: auto;
+    display: flex;
+  }
+  .insurance-in-section .insurance-in-more-desktop {
+    display: none !important;
+  }
+  .insurance-in-section .insurance-in-swiper {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    min-width: 0;
+    width: 100%;
+  }
+  .insurance-in-section .insurance-in-banner {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    margin-top: 0;
+  }
+  .insurance-in-section .insurance-in-more-bottom {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    justify-self: stretch;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 18px;
+    min-height: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  }
+  .insurance-in-section .insurance-in-more-bottom:active {
+    background: var(--bg-sub);
+  }
+  .insurance-in-section .insurance-in-more-bottom:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
   .review-inner {
     padding-left: 16px;
     padding-right: 16px;
@@ -1456,5 +1697,46 @@ body.profile-open {
   }
   .language-card {
     padding: 14px 10px 12px;
+  }
+  .insurance-in-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  /* 보험IN 슬라이드 내 2×2 → 모바일 1열 */
+  .insurance-in-swiper .swiper-page-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .insurance-in-card {
+    min-height: 0;
+    padding: 12px 14px 10px;
+  }
+  .insurance-in-card h4 {
+    font-size: 17px;
+  }
+  .insurance-in-card > p:not(.insurance-in-meta):not(.insurance-in-author) {
+    font-size: 14px;
+  }
+  .insurance-in-foot {
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    padding-top: 6px;
+  }
+  .insurance-in-meta {
+    font-size: 13px;
+    gap: 10px;
+    margin: 3px 0;
+  }
+  .insurance-in-meta > span + span::before {
+    margin-right: 8px;
+  }
+  .insurance-in-author {
+    font-size: 13px !important;
+    gap: 4px;
+    margin-left: auto !important;
+    text-align: right;
+  }
+  .insurance-in-banner {
+    min-height: 96px;
+    font-size: 26px;
   }
 }

@@ -15,7 +15,7 @@
   <body>
     <div class="layout-wrapper main-page">
       <!-- 헤더 · 로그인 후: .site-header.member 로 클래스만 교체 -->
-      <header class="site-header guest">
+      <header class="site-header member">
         <div class="header-inner">
           <div class="logo">
             <a href="MFC001.html">
@@ -42,6 +42,7 @@
               </li>
             </ul>
           </nav>
+          <!-- 프로필: 개인 회원 (MFC001과 동일) -->
           <div class="profile-menu" data-profile-menu>
             <div class="profile-menu-summary">
               <strong>김노아</strong>
@@ -1138,49 +1139,6 @@
               </div>
             </div>
           </section>
-
-          <!-- 상황별 프로모션 배너 -->
-          <section class="section">
-            <div class="situation-banner">
-              <div class="situation-banner-top">
-                <div class="control-box situation-banner-controls">
-                  <button type="button" class="control-btn swiper-nav-prev" aria-label="이전"></button>
-                  <button type="button" class="control-btn swiper-nav-next" aria-label="다음"></button>
-                </div>
-              </div>
-              <div id="sitAdSwiperBelowLang" class="swiper situation-banner-list">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <a href="#" class="situation-banner-slide">
-                      <!-- 이미지로 치환예정-->
-                      <div class="situation-banner-card">
-                        <p class="situation-banner-title">광고 배너</p>
-                        <p class="situation-banner-desc">배너 이미지 연결 예정</p>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#" class="situation-banner-slide">
-                      <!-- 이미지로 치환예정-->
-                      <div class="situation-banner-card">
-                        <p class="situation-banner-title">광고 배너</p>
-                        <p class="situation-banner-desc">배너 이미지 연결 예정</p>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#" class="situation-banner-slide">
-                      <!-- 이미지로 치환예정-->
-                      <div class="situation-banner-card">
-                        <p class="situation-banner-title">광고 배너</p>
-                        <p class="situation-banner-desc">배너 이미지 연결 예정</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
         </div>
       </main>
 
@@ -1209,7 +1167,6 @@
                   <span>이용문의 : 010-9941-2899</span>
                 </p>
               </div>
-
               <p class="copyright">© 2026 TheRichLab Corp.</p>
             </div>
             <div class="footer-trail">
@@ -1274,24 +1231,18 @@
           },
         });
 
-        // 상황별 AD 롤링 배너 (상단·하단)
-        document.querySelectorAll('.situation-banner').forEach(function (bannerRoot) {
-          var sitEl = bannerRoot.querySelector('.situation-banner-list.swiper');
-          if (!sitEl) {
-            return;
-          }
-          MyFC.initSwiper(sitEl, bannerRoot, {
-            speed: 450,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            loop: true,
-            grabCursor: true,
-            autoplay: {
-              delay: 4500,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            },
-          });
+        // 상황별 AD 롤링 배너
+        MyFC.initSwiper('#sitAdSwiper', document.querySelector('.situation-banner'), {
+          speed: 450,
+          slidesPerView: 1,
+          spaceBetween: 0,
+          loop: true,
+          grabCursor: true,
+          autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
         });
 
         // 상황별 추천 · 2열 리스트

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -76,7 +76,7 @@
 
           <form class="form-box" action="MFC004_L01_04_02.html" method="post">
             <div class="review-rate">
-              <p>상담은 전반적으로 어떠셨나요?</p>
+              <p class="form-label">상담은 전반적으로 어떠셨나요? <b>*</b></p>
               <div class="review-rate-stars star-half" role="radiogroup">
                 <div class="star-unit">
                   <label class="star-hit star-hit-l"
@@ -131,19 +131,18 @@
               </div>
             </div>
             <div class="form-field">
-              <label class="form-label" for="compose-title">제목</label>
+              <label class="form-label" for="compose-title">제목 <b>*</b></label>
               <p class="form-text">한줄로 요약해 주세요.</p>
               <input class="form-input" id="compose-title" name="title" type="text" placeholder="예: 꼼꼼한 상담으로 신뢰가 갔어요" />
             </div>
 
             <div class="form-field">
-              <label class="form-label" for="compose-body">내용</label>
+              <label class="form-label" for="compose-body">내용 <b>*</b></label>
               <p class="form-text">상담 경험을 자세히 작성해주세요.</p>
               <textarea
                 class="form-textarea"
                 id="compose-body"
                 name="body"
-                rows="6"
                 placeholder="예: 보험 용어가 어려웠는데 쉽게 설명해주셔서 좋았어요. 필요한 보장만 추천해주셔서 신뢰가 갔습니다."
               ></textarea>
             </div>
@@ -155,27 +154,52 @@
         </section>
       </main>
 
+      <!-- 푸터 -->
       <footer class="site-footer">
         <div class="footer-inner">
-          <div class="footer-top">
-            <p class="footer-logo"><a href="MFC001.html" class="footer-logo-link">MyFC</a></p>
-            <ul class="footer-links">
-              <li><a href="#">이용약관</a></li>
-              <li><a href="#">개인정보 처리방침</a></li>
-            </ul>
+          <div class="footer-columns">
+            <div class="footer-col">
+              <p class="footer-logo">
+                <a href="MFC001.html" class="footer-logo-link"><img src="../assets/images/footer-logo.svg" alt="MyFC" /></a>
+              </p>
+              <div class="footer-info">
+                <p class="footer-ceo">
+                  <span>(주)더리치랩</span>
+                  <span>대표이사 박영진</span>
+                </p>
+                <p class="footer-info-split">
+                  <span>서울특별시 강남구 테헤란로 507, 8층 131호</span>
+                  <span>E-mail : <a href="mailto:myfc.helpdesk@gmail.com">myfc.helpdesk@gmail.com</a></span>
+                </p>
+                <p class="footer-info-split">
+                  <span>사업자등록번호 : 762-88-02797</span>
+                  <span>통신판매번호 : 제 2025-서울강남-06308호</span>
+                </p>
+                <p class="footer-info-split">
+                  <span>이용문의 : 010-9941-2899</span>
+                </p>
+              </div>
+              <p class="copyright">© 2026 TheRichLab Corp.</p>
+            </div>
+            <div class="footer-trail">
+              <ul class="footer-links">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">법적책임</a></li>
+              </ul>
+              <div class="footer-patent">
+                <p class="footer-patent-mark">
+                  <img src="../assets/images/kipo-logo.svg" alt="특허청" />
+                  <span>특허청</span>
+                </p>
+                <div class="footer-patent-text">
+                  <p>MyFC의 서비스는 여러 건의 특허가 출원되어 있습니다</p>
+                  <p>(특허번호 : 10-2026-0062616 / 10-2026-0064554 외 다수)</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="footer-info">
-            <p class="footer-ceo"><span>(주)더리치랩</span><span>대표이사 박영진</span></p>
-            <p class="footer-info-split">
-              <span>서울특별시 강남구 테헤란로 507, 8층 131호</span>
-              <span>E-mail : <a href="mailto:myfc.helpdesk@gmail.com">myfc.helpdesk@gmail.com</a></span>
-            </p>
-            <p class="footer-info-split">
-              <span>사업자등록번호 : 762-88-02797</span>
-              <span>통신판매번호 : 제 2025-서울강남-06308호</span>
-            </p>
-          </div>
-          <p class="copyright">© 2026 Therichlabcompany, Inc.</p>
         </div>
       </footer>
     </div>
