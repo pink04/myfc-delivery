@@ -80,7 +80,7 @@
 }
 
 .search-results .ad-mark:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -119,12 +119,12 @@
 }
 
 .search-results .control-box .control-btn:hover:not(:disabled) {
-  background-color: #f8fafc;
+  background-color: var(--bg-sub);
   border-color: var(--border-strong);
 }
 
 .search-results .control-box .control-btn:focus-visible:not(:disabled) {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -138,7 +138,7 @@
 
 .search-results .filter-btn {
   flex: none;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   background: #fff;
   color: var(--text-sub);
   border-radius: 999px;
@@ -154,13 +154,13 @@
 }
 
 .search-results .filter-btn.is-active {
-  background: #0f172a;
+  background: var(--text);
   color: #fff;
-  border-color: #0f172a;
+  border-color: var(--text);
 }
 
 .search-results .filter-btn:hover:not(.is-active) {
-  background-color: #f8fafc;
+  background-color: var(--bg-sub);
   border-color: var(--border-strong);
   color: var(--text-sub);
 }
@@ -171,7 +171,7 @@
 }
 
 .search-results .filter-btn:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -201,7 +201,7 @@
 }
 
 .search-results .list-item:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -220,7 +220,7 @@
   border-radius: 8px;
   object-fit: cover;
   flex-shrink: 0;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
 }
 
@@ -251,7 +251,7 @@
 
 .search-results .list-desc {
   margin: 2px 0 0;
-  color: #64748b;
+  color: var(--text-muted);
   max-width: 100%;
   min-width: 0;
   white-space: nowrap;
@@ -354,8 +354,8 @@
   width: 100%;
   min-height: 48px;
   padding: 0 44px 0 16px;
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 10px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%2394a3b8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M2.5 4.25 6 7.75l3.5-3.5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -416,7 +416,7 @@ a.directory-select > span {
   margin: 0;
   font: inherit;
   font-weight: 400;
-  color: #64748b;
+  color: var(--text-muted);
   background: none;
   border: none;
   cursor: pointer;
@@ -429,11 +429,11 @@ a.directory-select > span {
 
 .fc-sort-btn.is-active {
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
 }
 
 .fc-sort-btn:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -447,8 +447,8 @@ a.directory-select > span {
 /* 메인 · 추천 FC 캐러셀 카드와 동일 톤 (main.css .card / .recommend-list 기준) */
 .fc-profile-grid > .card {
   box-sizing: border-box;
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 12px;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
   overflow: hidden;
@@ -477,7 +477,7 @@ a.directory-select > span {
   text-decoration: none;
 }
 .fc-profile-grid .card-link:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -524,13 +524,13 @@ a.directory-select > span {
   overflow: hidden;
 }
 .fc-profile-grid .list-tags span {
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 5px;
   min-height: 22px;
   line-height: 20px;
   padding: 0 4px;
   font-size: 14px;
-  color: #4b586b;
+  color: var(--text-sub);
   display: inline-flex;
   align-items: center;
 }
@@ -623,7 +623,7 @@ a.directory-select > span {
 
   /* 칩 스타일은 main.css .list-tags span — 그리드 모바일만 글자색 */
   .fc-profile-grid .list-tags span {
-    color: #64748b;
+    color: var(--text-muted);
   }
 }
 
@@ -817,8 +817,8 @@ a.directory-select > span {
   font-size: 16px;
   font-weight: 700;
   font-family: inherit;
-  color: #ffffff;
-  background: #2563eb;
+  color: var(--bg);
+  background: var(--primary);
   border: none;
   border-radius: 12px;
   cursor: pointer;
@@ -832,11 +832,11 @@ a.fc-detail-cta {
 }
 
 .fc-detail-cta:hover {
-  background: #1d4ed8;
+  background: var(--primary-hover);
 }
 
 .fc-detail-cta:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 3px;
 }
 
@@ -916,7 +916,7 @@ a.fc-detail-cta {
 }
 
 .detail-page .fc-detail-certs-section .fc-detail-cert-dl:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -1032,12 +1032,12 @@ a.fc-detail-cta {
 }
 .detail-page .control-box .control-btn:hover:not(:disabled),
 .c-modal:has(.story-detail-wrap) .story-detail-wrap > .control-btn:hover:not(:disabled) {
-  background-color: #f8fafc;
+  background-color: var(--bg-sub);
   border-color: var(--border-strong);
 }
 .detail-page .control-box .control-btn:focus-visible:not(:disabled),
 .c-modal:has(.story-detail-wrap) .story-detail-wrap > .control-btn:focus-visible:not(:disabled) {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 .detail-page .control-box .swiper-nav-next,
@@ -1135,7 +1135,7 @@ a.fc-detail-cta {
 }
 
 .detail-reviews-panel .review-card:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -1391,7 +1391,7 @@ a.fc-detail-cta {
 .c-modal:has(.story-detail-wrap) .story-detail-card {
   border: 1px solid var(--border);
   border-radius: 14px;
-  background: #ffffff;
+  background: var(--bg);
   overflow: hidden;
 }
 
@@ -1433,7 +1433,7 @@ a.fc-detail-cta {
 .c-modal:has(.story-detail-wrap) .story-detail-meta .c-rate {
   font-size: 15px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
 }
 
 .c-modal:has(.story-detail-wrap) .story-detail-meta .c-rate-star {
@@ -1532,21 +1532,21 @@ a.fc-detail-cta {
   padding: 15px 20px;
   font-size: 16px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--bg);
   text-align: center;
   text-decoration: none;
-  background: #2563eb;
+  background: var(--primary);
   border-radius: 12px;
   box-sizing: border-box;
   transition: background-color 0.2s ease;
 }
 
 .c-modal.notice-link .c-modal-foot > a:hover {
-  background: #1d4ed8;
+  background: var(--primary-hover);
 }
 
 .c-modal.notice-link .c-modal-foot > a:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 3px;
 }
 
@@ -1604,7 +1604,7 @@ a.fc-detail-cta {
   margin: 18px 0 8px;
   font-size: 15px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
 }
 
 .c-modal.terms .c-modal-body h3:first-child {
@@ -1643,9 +1643,9 @@ a.fc-detail-cta {
   margin: 0;
   padding: 18px 16px;
   text-align: left;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 14px;
-  background: #ffffff;
+  background: var(--bg);
   cursor: pointer;
   box-sizing: border-box;
   transition:
@@ -1683,13 +1683,13 @@ a.fc-detail-cta {
 .signup-type-card strong {
   display: block;
   font-size: 18px;
-  color: #0f172a;
+  color: var(--text);
   margin: 0 0 6px;
   letter-spacing: -0.02em;
 }
 
 .signup-type-card p {
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .signup-type-card:hover {
@@ -1707,7 +1707,7 @@ a.fc-detail-cta {
 }
 
 .signup-type-card:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -1739,7 +1739,7 @@ a.fc-detail-cta {
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: -0.03em;
-  color: #0f172a;
+  color: var(--text);
 }
 
 .signup-done-inner > p {
@@ -1753,9 +1753,9 @@ a.fc-detail-cta {
 .signup-done-inner .fc-fee-promo {
   margin: 22px 0 0;
   padding: 22px 22px 24px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 14px;
-  background: #f8fafc;
+  background: var(--bg-sub);
   box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
   box-sizing: border-box;
   text-align: center;
@@ -1771,7 +1771,7 @@ a.fc-detail-cta {
   font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .signup-done-inner .fc-fee-promo > p + p {
@@ -1785,7 +1785,7 @@ a.fc-detail-cta {
 
 .signup-done-inner .fc-fee-promo s {
   font-weight: 400;
-  color: #94a3b8;
+  color: var(--focus-border);
   text-decoration: line-through;
 }
 
@@ -1799,7 +1799,7 @@ a.fc-detail-cta {
 .signup-done-inner .fc-fee-promo > p + p strong {
   font-weight: 700;
   font-size: 25px;
-  color: #0f172a;
+  color: var(--text);
   letter-spacing: -1px;
 }
 
@@ -1811,7 +1811,7 @@ a.fc-detail-cta {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  color: #1d4ed8;
+  color: var(--primary-hover);
   background: #eff6ff;
   vertical-align: 0.12em;
 }
@@ -1825,8 +1825,8 @@ a.fc-detail-cta {
   padding: 15px 24px;
   font-size: 16px;
   font-weight: 700;
-  color: #ffffff;
-  background: #2563eb;
+  color: var(--bg);
+  background: var(--primary);
   border-radius: 12px;
   text-decoration: none;
   box-sizing: border-box;
@@ -1834,11 +1834,11 @@ a.fc-detail-cta {
 }
 
 .signup-done-inner > a:hover {
-  background: #1d4ed8;
+  background: var(--primary-hover);
 }
 
 .signup-done-inner > a:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 3px;
 }
 
@@ -1883,7 +1883,7 @@ a.fc-detail-cta {
 .signup-page main > form {
   margin: 0;
   padding: 0;
-  background: #ffffff;
+  background: var(--bg);
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -1925,11 +1925,11 @@ a.fc-detail-cta {
 
 .signup-page .c-tabs > a:hover {
   color: var(--text-sub);
-  background: #f8fafc;
+  background: var(--bg-sub);
 }
 
 .signup-page .c-tabs > a[aria-current='page'] {
-  color: #ffffff;
+  color: var(--bg);
   background: #111827;
 }
 
@@ -1950,11 +1950,11 @@ a.fc-detail-cta {
   font-size: 15px;
   font-weight: 600;
   line-height: 1.5;
-  color: #0f172a;
+  color: var(--text);
 }
 
 .signup-page main > form > p span {
-  color: #ef4444;
+  color: var(--danger);
 }
 
 .signup-page .fc-profile-thumb {
@@ -1971,7 +1971,7 @@ a.fc-detail-cta {
   border: none;
   border-radius: 50%;
   overflow: visible;
-  background: #e2e8f0;
+  background: var(--border);
   cursor: pointer;
 }
 
@@ -1994,8 +1994,8 @@ a.fc-detail-cta {
   height: 24px;
   border-radius: 50%;
   border: 1px solid var(--border-strong);
-  background-color: #ffffff;
-  background-image: linear-gradient(#64748b, #64748b), linear-gradient(#64748b, #64748b);
+  background-color: var(--bg);
+  background-image: linear-gradient(var(--text-muted), var(--text-muted)), linear-gradient(var(--text-muted), var(--text-muted));
   background-size:
     10px 2px,
     2px 10px;
@@ -2008,7 +2008,7 @@ a.fc-detail-cta {
 .signup-page .fc-profile-thumb > button:hover::after,
 .signup-page .fc-profile-thumb > button:focus-visible::after {
   border-color: var(--focus-border);
-  background-color: #f8fafc;
+  background-color: var(--bg-sub);
   background-image: linear-gradient(var(--text-sub), var(--text-sub)), linear-gradient(var(--text-sub), var(--text-sub));
 }
 
@@ -2035,7 +2035,7 @@ a.fc-detail-cta {
 .signup-page .time-range > span {
   flex: 0 0 auto;
   font-size: 15px;
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .signup-page .file-upload .proof-mode {
@@ -2229,9 +2229,9 @@ a.fc-detail-cta {
 
 .signup-page .story-guide > ul {
   padding: 20px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 12px;
-  background: #f8fafc;
+  background: var(--bg-sub);
 }
 
 .signup-page .story-guide > ul li {
@@ -2242,13 +2242,13 @@ a.fc-detail-cta {
 }
 
 .signup-page .story-guide > p:last-of-type {
-  color: #94a3b8;
+  color: var(--focus-border);
 }
 
 .signup-page .story-guide-emphasis {
   font-weight: 700;
   font-style: normal;
-  color: #0f172a;
+  color: var(--text);
 }
 
 /* MFC008_04 · 활동 스토리 이미지 썸네일 영역 */
@@ -2265,9 +2265,9 @@ a.fc-detail-cta {
   width: 116px;
   height: 116px;
   padding: 0;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background: #ffffff;
+  background: var(--bg);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2291,7 +2291,7 @@ a.fc-detail-cta {
   border: none;
   border-radius: 50%;
   background: #dbeafe;
-  color: #2563eb;
+  color: var(--primary);
   font-size: 22px;
   font-weight: 400;
   cursor: pointer;
@@ -2303,11 +2303,11 @@ a.fc-detail-cta {
 
 .signup-page .fc-story-thumb-add:hover {
   background: #bfdbfe;
-  color: #1d4ed8;
+  color: var(--primary-hover);
 }
 
 .signup-page .fc-story-thumb-add:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -2399,7 +2399,7 @@ a.fc-detail-cta {
 
 .consult-request-fc > div > p:nth-of-type(2) {
   font-size: 14px;
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .consult-request-fc > div > p:nth-of-type(3) {
@@ -2428,7 +2428,7 @@ a.fc-detail-cta {
   padding: 30px 20px;
   border: 1px solid var(--border);
   border-radius: 12px;
-  background: #ffffff;
+  background: var(--bg);
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
   box-sizing: border-box;
 }
@@ -2475,7 +2475,7 @@ a.fc-detail-cta {
   text-align: center;
   font-size: 12px;
   font-weight: 600;
-  color: #94a3b8;
+  color: var(--focus-border);
   line-height: 28px;
 }
 
@@ -2496,12 +2496,12 @@ a.fc-detail-cta {
 
 .consult-date-picker-day.is-today {
   border-color: #bfdbfe;
-  color: #2563eb;
+  color: var(--primary);
 }
 
 .consult-date-picker-day.is-selected {
-  background: #2563eb;
-  color: #ffffff;
+  background: var(--primary);
+  color: var(--bg);
 }
 
 .consult-request .consult-request-read {
@@ -2539,7 +2539,7 @@ a.fc-detail-cta {
   padding: 0 10px;
   font-size: 14px;
   font-weight: 600;
-  color: #0f172a;
+  color: var(--text);
   border: 1px solid var(--border-strong);
   border-radius: 7px;
   background: #fff;
@@ -2574,11 +2574,11 @@ a.fc-detail-cta {
 
 .consult-request .consult-file-load-btn:hover {
   border-color: #6b7280;
-  background: #f8fafc;
+  background: var(--bg-sub);
 }
 
 .consult-request .consult-file-load-btn:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -2654,7 +2654,7 @@ a.fc-detail-cta {
   border: none;
   border-radius: 50%;
   background: #dbeafe;
-  color: #2563eb;
+  color: var(--primary);
   font-size: 18px;
   line-height: 24px;
 }
@@ -2699,8 +2699,8 @@ a.fc-detail-cta {
 .form-page.account-find-page main .form-box {
   margin: 0;
   padding: 26px 22px 28px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 16px;
   box-shadow:
     0 1px 2px rgba(15, 23, 42, 0.04),
@@ -2722,7 +2722,7 @@ a.fc-detail-cta {
   content: '';
   flex: 1;
   height: 1px;
-  background: #e2e8f0;
+  background: var(--border);
 }
 .form-box .login-secondary {
   display: flex;
@@ -2736,10 +2736,10 @@ a.fc-detail-cta {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.2;
-  color: #0f172a;
+  color: var(--text);
   text-decoration: none;
-  background: #ffffff;
-  border: 1px solid #d1d5db;
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
   border-radius: 12px;
   cursor: pointer;
   font-family: inherit;
@@ -2748,11 +2748,11 @@ a.fc-detail-cta {
     border-color 0.2s ease;
 }
 .form-box .login-secondary:hover {
-  background: #f8fafc;
+  background: var(--bg-sub);
   border-color: var(--focus-border);
 }
 .form-box .login-secondary:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 .form-box .login-reset,
@@ -2764,7 +2764,7 @@ a.fc-detail-cta {
 }
 .form-box .login-reset a,
 .form-page main .page-inner-narrow > .login-reset a {
-  color: #64748b;
+  color: var(--text-muted);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -2774,7 +2774,7 @@ a.fc-detail-cta {
 }
 .form-box .login-reset a:focus-visible,
 .form-page main .page-inner-narrow > .login-reset a:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -2804,7 +2804,7 @@ a.fc-detail-cta {
   color: #374151;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
-  background: #f8fafc;
+  background: var(--bg-sub);
   background-image: url('../images/ic-detail-download.svg');
   background-repeat: no-repeat;
   background-position: 14px center;
@@ -2818,7 +2818,7 @@ a.fc-detail-cta {
 
 .securities-page .securities-file:hover {
   border-color: var(--border-strong);
-  background-color: #f1f5f9;
+  background-color: var(--bg-elevated);
 }
 
 .securities-page .securities-file.is-selected {
@@ -2827,7 +2827,7 @@ a.fc-detail-cta {
 }
 
 .securities-page .securities-file:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -2855,7 +2855,7 @@ a.fc-detail-cta {
 }
 
 .securities-page .securities-remove:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -2871,7 +2871,7 @@ a.fc-detail-cta {
   border: none;
   border-radius: 50%;
   background: #dbeafe;
-  color: #2563eb;
+  color: var(--primary);
   font-size: 18px;
   line-height: 1;
   font-family: inherit;
@@ -2883,7 +2883,7 @@ a.fc-detail-cta {
 }
 
 .securities-page .securities-add:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -2894,7 +2894,7 @@ a.fc-detail-cta {
   padding: 14px 20px;
   font-size: 16px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--bg);
   background: var(--primary);
   border: none;
   border-radius: 12px;
@@ -2911,7 +2911,7 @@ a.fc-detail-cta {
 }
 
 .securities-page .securities-submit:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -2963,7 +2963,7 @@ a.fc-detail-cta {
   padding: 24px 16px;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
-  background: #f8fafc;
+  background: var(--bg-sub);
   color: var(--text-sub);
 }
 
@@ -2994,7 +2994,7 @@ a.fc-detail-cta {
 .consult-status-page .consult-empty {
   margin: 16px 0 0;
   padding: 36px 12px;
-  color: #94a3b8;
+  color: var(--focus-border);
 }
 
 .consult-status-page .consult-empty > p {
@@ -3022,7 +3022,7 @@ a.fc-detail-cta {
   font-size: 13px;
   line-height: 1.45;
   font-weight: 500;
-  color: #64748b;
+  color: var(--text-muted);
   word-break: break-all;
 }
 
@@ -3054,7 +3054,7 @@ a.fc-detail-cta {
 }
 
 .consult-status-page.fc-consult-mgmt .consult-card-hit:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
   border-radius: 8px;
 }
@@ -3069,7 +3069,7 @@ a.fc-detail-cta {
 
 .consult-status-page .c-tabs {
   margin: 0 0 18px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-strong);
 }
 
 .consult-status-page .c-tabs > button {
@@ -3083,8 +3083,8 @@ a.fc-detail-cta {
 }
 
 .consult-status-page .c-tabs > button[aria-selected='true'] {
-  color: #0f172a;
-  background: #f8fafc;
+  color: var(--text);
+  background: var(--bg-sub);
 }
 
 /* 공통: Swiper Grid 모듈 없이 한 슬라이드 안 2×2 (DOM 순서 = 표시 순서) */
@@ -3152,8 +3152,8 @@ a.fc-detail-cta {
   flex-direction: column;
   width: 100%;
   min-height: 212px;
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 12px;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
   overflow: hidden;
@@ -3182,8 +3182,8 @@ a.fc-detail-cta {
   flex-direction: column;
   width: 100%;
   min-height: 212px;
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 12px;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
   overflow: hidden;
@@ -3245,7 +3245,7 @@ a.fc-detail-cta {
 }
 
 .consult-status-page .recommend-list .badge.pending {
-  color: #1d4ed8;
+  color: var(--primary-hover);
   background: #eff6ff;
   border: 1px solid #bfdbfe;
 }
@@ -3274,8 +3274,8 @@ a.fc-detail-cta {
   padding: 0 12px;
   border: none;
   border-radius: 10px;
-  background: #2563eb;
-  color: #ffffff;
+  background: var(--primary);
+  color: var(--bg);
   font-size: 14px;
   font-weight: 700;
   font-family: inherit;
@@ -3284,18 +3284,18 @@ a.fc-detail-cta {
 
 .consult-status-page .recommend-list .consult-status-action:disabled {
   background: #e5e7eb;
-  color: #94a3b8;
+  color: var(--focus-border);
 }
 
 .consult-status-page .recommend-list a.consult-status-action:focus-visible,
 .consult-status-page .recommend-list .consult-status-action:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
 .consult-status-page .recommend-list a.consult-status-action:hover {
   background: var(--primary-hover);
-  color: #ffffff;
+  color: var(--bg);
 }
 
 @media (max-width: 640px) {
@@ -3326,7 +3326,7 @@ a.fc-detail-cta {
   margin: 0 0 10px;
   font-size: 18px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
 }
 
 /* MFC004_L01_01_01 · 회원 탈퇴 */
@@ -3338,7 +3338,7 @@ a.fc-detail-cta {
   padding: 14px 20px;
   font-size: 16px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--bg);
   background: var(--primary);
   border: none;
   border-radius: 12px;
@@ -3357,8 +3357,8 @@ a.fc-detail-cta {
   margin-top: 28px;
   padding: 20px 20px 22px;
   text-align: center;
-  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
-  border: 1px solid #e2e8f0;
+  background: linear-gradient(180deg, var(--bg-sub) 0%, var(--bg-elevated) 100%);
+  border: 1px solid var(--border);
   border-radius: 14px;
   box-sizing: border-box;
 }
@@ -3375,7 +3375,7 @@ a.fc-detail-cta {
   font-weight: 600;
   line-height: 1.45;
   letter-spacing: -0.02em;
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .signup-done-inner .flow-result-card .flow-result-main {
@@ -3383,7 +3383,7 @@ a.fc-detail-cta {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.45;
-  color: #0f172a;
+  color: var(--text);
 }
 
 .signup-done-inner:has(.flow-result-card) > a {
@@ -3392,21 +3392,21 @@ a.fc-detail-cta {
 
 .signup-done-inner .flow-result-card .warn {
   font-weight: 700;
-  color: #ef4444;
+  color: var(--danger);
 }
 
 .signup-done-inner .flow-result-card > p.flow-result-inquiry {
   margin: 20px 0 0;
   padding-top: 16px;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid var(--border);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.55;
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .signup-done-inner .flow-result-card > p.flow-result-inquiry a {
-  color: #2563eb;
+  color: var(--primary);
   font-weight: 600;
   text-decoration: none;
 }
@@ -3444,7 +3444,7 @@ a.fc-detail-cta {
 .consult-detail-page .consult-request .form-field > .form-textarea[readonly] {
   margin-top: 4px;
   background: #f0f4f8;
-  border-color: #e2e8f0;
+  border-color: var(--border);
   color: #374151;
 }
 
@@ -3461,10 +3461,10 @@ a.fc-detail-cta {
   align-items: center;
   gap: 10px;
   padding: 10px 12px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 10px;
-  background: #f8fafc;
-  color: #0f172a;
+  background: var(--bg-sub);
+  color: var(--text);
   font-size: 14px;
   line-height: 1.4;
   text-decoration: none;
@@ -3474,11 +3474,11 @@ a.fc-detail-cta {
 
 .consult-detail-page .consult-detail-file-link:hover {
   border-color: #cbd5e1;
-  background: #f1f5f9;
+  background: var(--bg-elevated);
 }
 
 .consult-detail-page .consult-detail-file-link:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -3550,24 +3550,24 @@ a.fc-detail-cta {
 }
 
 .ad-mgmt-page .ad-mgmt-updated-refresh:hover .ad-mgmt-updated-ico {
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .ad-mgmt-page .ad-mgmt-updated-refresh:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
 .ad-mgmt-page .ad-mgmt-updated-ico {
   display: inline-flex;
-  color: #9ca3af;
+  color: var(--text-placeholder);
 }
 
 .ad-mgmt-page .ad-mgmt-table-wrap {
   overflow-x: auto;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  background: #ffffff;
+  background: var(--bg);
   -webkit-overflow-scrolling: touch;
 }
 
@@ -3591,7 +3591,7 @@ a.fc-detail-cta {
 
 .ad-mgmt-page .ad-mgmt-table-wrap tbody td {
   padding: 14px 10px;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid var(--bg-elevated);
   font-size: 14px;
   color: #1f2937;
   text-align: center;
@@ -3620,7 +3620,7 @@ a.fc-detail-cta {
 
 .ad-mgmt-page .ad-status.on {
   font-weight: 600;
-  color: #2563eb;
+  color: var(--primary);
 }
 
 .ad-mgmt-page .ad-mgmt-table-wrap + .c-paging {
@@ -3630,7 +3630,7 @@ a.fc-detail-cta {
 
 .ad-mgmt-page .ad-status.end {
   font-weight: 500;
-  color: #9ca3af;
+  color: var(--text-placeholder);
 }
 
 @media (max-width: 480px) {
@@ -3687,7 +3687,7 @@ a.fc-detail-cta {
   font-size: 11px;
   font-weight: 600;
   font-family: inherit;
-  color: #9ca3af;
+  color: var(--text-placeholder);
   white-space: nowrap;
   text-decoration: none;
   box-sizing: border-box;
@@ -3701,11 +3701,11 @@ a.fc-detail-cta {
 .fc-ad-apply-page .ad-apply-tabs > button[aria-selected='true'],
 .fc-ad-apply-page .ad-apply-tabs > a[aria-selected='true'] {
   background: #111827;
-  color: #ffffff;
+  color: var(--bg);
 }
 
 .fc-ad-apply-page .directory-select .is-placeholder {
-  color: #94a3b8;
+  color: var(--focus-border);
   font-weight: 400;
 }
 
@@ -3716,9 +3716,9 @@ a.fc-detail-cta {
   gap: 12px;
   margin-top: 8px;
   padding: 14px 16px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 10px;
-  background: #ffffff;
+  background: var(--bg);
   box-sizing: border-box;
 }
 
@@ -3726,7 +3726,7 @@ a.fc-detail-cta {
   margin: 0;
   flex: 0 1 auto;
   min-width: 0;
-  color: #0f172a;
+  color: var(--text);
   font-weight: 500;
 }
 
@@ -3734,7 +3734,7 @@ a.fc-detail-cta {
   flex-shrink: 0;
   font-size: 15px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
   font-variant-numeric: tabular-nums;
 }
 
@@ -3766,7 +3766,7 @@ a.fc-detail-cta {
 
 .fc-ad-apply-page .form-field .c-check .warn {
   font-weight: 700;
-  color: #ef4444;
+  color: var(--danger);
 }
 
 /* 광고 신청 · 리뷰 선택 — MFC004_L01_05와 동일 후기 영역을 lg 모달에 표시 */
@@ -3874,7 +3874,7 @@ a.fc-detail-cta {
   margin: 22px 0 10px;
   font-size: 15px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
 }
 
 .layout-wrapper.terms-page .terms-body ul {

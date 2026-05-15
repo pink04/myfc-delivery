@@ -117,7 +117,7 @@ body.profile-open {
   width: auto;
   height: 100dvh;
   padding: 56px 20px 22px;
-  background: #ffffff;
+  background: var(--bg);
   box-sizing: border-box;
   overflow-y: auto;
 }
@@ -275,21 +275,21 @@ body.profile-open {
     border-color 0.2s ease;
 }
 .hero-cta .btn.btn-myfc {
-  background: #ffffff;
+  background: var(--bg);
   color: #111;
   border: 1px solid transparent;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
 }
 .hero-cta .btn.btn-myfc:hover {
-  background: #f8fafc;
+  background: var(--bg-sub);
   box-shadow: 0 2px 10px rgba(15, 23, 42, 0.1);
 }
 .hero-cta .btn.btn-myfc:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 .hero-cta .btn.btn-fc-list {
-  background: #0f172a;
+  background: var(--text);
   color: #fff;
   border: 1px solid transparent;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -319,7 +319,7 @@ body.profile-open {
   cursor: pointer;
 }
 .ad-mark:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 .situation-banner-top .ad-mark {
@@ -329,8 +329,8 @@ body.profile-open {
 
 /* 카드 공통 */
 .card {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 12px;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
   overflow: hidden;
@@ -425,8 +425,8 @@ body.profile-open {
   max-width: 100%;
   margin: 0;
   min-height: 0;
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 12px;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
   overflow: hidden;
@@ -466,8 +466,8 @@ body.profile-open {
   height: 34px;
   padding: 0 12px;
   border-radius: 6px;
-  border: 1px solid #e2e8f0;
-  background: #ffffff;
+  border: 1px solid var(--border);
+  background: var(--bg);
   color: #1e293b;
   cursor: pointer;
   user-select: none;
@@ -482,11 +482,11 @@ body.profile-open {
   cursor: default;
 }
 .control-btn:hover:not(:disabled) {
-  background-color: #f8fafc;
+  background-color: var(--bg-sub);
   border-color: var(--border-strong);
 }
 .control-btn:focus-visible:not(:disabled) {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 .profile {
@@ -610,7 +610,7 @@ body.profile-open {
   box-sizing: border-box;
   min-height: 180px;
   padding: 20px 16px;
-  background: #e2e8f0;
+  background: var(--border);
   border: 1px solid var(--border-strong);
   border-radius: 12px;
 }
@@ -626,7 +626,7 @@ body.profile-open {
   margin: 6px 0 0;
   font-size: 14px;
   line-height: 1.4;
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 /* 상황별 추천 · 2열 리스트 */
@@ -654,7 +654,7 @@ body.profile-open {
   height: 100%;
 }
 .list-item:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 .list-left {
@@ -668,7 +668,7 @@ body.profile-open {
   border-radius: 8px;
   object-fit: cover;
   flex: none;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
 }
 .list-text {
@@ -710,7 +710,7 @@ body.profile-open {
   overflow: hidden;
 }
 .list-tags span {
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 5px;
   min-height: 22px;
   line-height: 20px;
@@ -753,7 +753,7 @@ body.profile-open {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   box-sizing: border-box;
-  background: #f1f5f9;
+  background: var(--bg-elevated);
   padding: 40px 0 44px;
 }
 .review-inner {
@@ -792,7 +792,7 @@ body.profile-open {
   text-align: center;
   font-size: 18px;
   line-height: 1.55;
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 /* main 전용 HTML은 content.css를 쓰지 않는 경우가 있어, 슬라이드 안 2×2 그리드를 여기서도 정의 */
@@ -848,7 +848,7 @@ body.profile-open {
 }
 .review-bleed .review-card {
   background-color: #fff;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
@@ -860,7 +860,7 @@ body.profile-open {
   overflow: hidden;
 }
 .review-bleed .review-card:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 .review-bleed .review-author {
@@ -868,7 +868,7 @@ body.profile-open {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
-  color: #64748b;
+  color: var(--text-muted);
   flex-shrink: 0;
 }
 .review-bleed .review-card-meta {
@@ -884,7 +884,7 @@ body.profile-open {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.35;
-  color: #2563eb;
+  color: var(--primary);
 }
 .review-bleed .review-card-meta .c-rate-star {
   color: #ffd910;
@@ -937,7 +937,7 @@ body.profile-open {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   background: #fff;
   color: var(--text-sub);
   border-radius: 999px;
@@ -983,12 +983,12 @@ body.profile-open {
   opacity: 1;
 }
 .language-filter.is-active {
-  background: #0f172a;
+  background: var(--text);
   color: #fff;
-  border-color: #0f172a;
+  border-color: var(--text);
 }
 .language-filter:hover:not(.is-active) {
-  background-color: #f8fafc;
+  background-color: var(--bg-sub);
   border-color: var(--border-strong);
   color: var(--text-sub);
 }
@@ -997,7 +997,7 @@ body.profile-open {
   border-color: #1e293b;
 }
 .language-filter:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 .language-list-grid {
@@ -1006,7 +1006,7 @@ body.profile-open {
   gap: 12px;
 }
 .language-card {
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
@@ -1018,7 +1018,7 @@ body.profile-open {
   min-height: 123px;
 }
 .language-card:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 .language-body {
@@ -1039,7 +1039,7 @@ body.profile-open {
   gap: 6px;
 }
 .language-tags span {
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 5px;
   min-height: 22px;
   padding: 0 8px;
@@ -1063,7 +1063,7 @@ body.profile-open {
   height: 70px;
   padding: 14px;
   border-radius: 999px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   background: #eef2f7;
   object-fit: contain;
 }
@@ -1095,7 +1095,7 @@ body.profile-open {
 .language-card.language-promo .language-body > p:nth-of-type(3) {
   font-size: 14px;
   font-weight: 500;
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 /* 최근 등록된 보험IN */
@@ -1283,7 +1283,7 @@ body.profile-open {
     pointer-events: none;
     z-index: 4;
     border-radius: inherit;
-    background: linear-gradient(to left, #ffffff 12%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to left, var(--bg) 12%, rgba(255, 255, 255, 0) 100%);
   }
   .recommend-list .swiper-wrapper {
     min-width: 100%;
@@ -1395,20 +1395,20 @@ body.profile-open {
     min-height: 48px;
     font-size: 16px;
     font-weight: 600;
-    color: #0f172a;
+    color: var(--text);
     text-decoration: none;
     background: #fff;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border);
     border-radius: 12px;
     box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
   }
   .recommend-section .section-more:active,
   .situation-list .section-more:active {
-    background: #f8fafc;
+    background: var(--bg-sub);
   }
   .recommend-section .section-more:focus-visible,
   .situation-list .section-more:focus-visible {
-    outline: 2px solid #2563eb;
+    outline: 2px solid var(--primary);
     outline-offset: 2px;
   }
 
@@ -1584,18 +1584,18 @@ body.profile-open {
     min-height: 48px;
     font-size: 16px;
     font-weight: 600;
-    color: #0f172a;
+    color: var(--text);
     text-decoration: none;
     background: #fff;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border);
     border-radius: 12px;
     box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
   }
   .review-inner .section-more:active {
-    background: #f8fafc;
+    background: var(--bg-sub);
   }
   .review-inner .section-more:focus-visible {
-    outline: 2px solid #2563eb;
+    outline: 2px solid var(--primary);
     outline-offset: 2px;
   }
   .review-bleed .review-sub-title {
@@ -1690,7 +1690,7 @@ body.profile-open {
     overflow: hidden;
     font-size: 14px;
     line-height: 1.45;
-    color: #64748b;
+    color: var(--text-muted);
   }
   .language-list-grid {
     grid-template-columns: 1fr;
