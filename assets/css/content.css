@@ -3889,3 +3889,612 @@ a.fc-detail-cta {
 .layout-wrapper.terms-page .terms-body li:last-child {
   margin-bottom: 0;
 }
+
+/* -------------------------------------------------------------------------- */
+/* MFC012 · 보험IN Q&A */
+/* -------------------------------------------------------------------------- */
+
+/* 공통 · 레이아웃 · 폼 (MFC012_02, MFC012_03) */
+.insurance-in-page > main > .page-inner-narrow {
+  margin-inline: auto;
+  min-width: 0;
+  width: 100%;
+  max-width: 560px;
+  box-sizing: border-box;
+}
+
+.insurance-in-page > main > .page-inner-narrow form {
+  margin: 0 0 24px;
+}
+
+.insurance-in-page .form-box {
+  padding: 20px 18px 22px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  box-sizing: border-box;
+}
+
+.insurance-in-page .form-field > .file-upload + .dash-list {
+  margin-top: 12px;
+}
+
+.insurance-in-page #insurance-in-body,
+.insurance-in-page #insurance-in-answer-body {
+  height: 200px;
+  min-height: 200px;
+}
+
+.insurance-in-page .gray-box > p:first-child {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.insurance-in-page .gray-box > p:first-child b {
+  color: var(--danger);
+}
+
+.insurance-in-page .gray-box ol {
+  margin: 10px 0 0;
+  padding-left: 1.35em;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.insurance-in-page .gray-box ol > li + li {
+  margin-top: 6px;
+}
+
+.insurance-in-page .insurance-in-agree {
+  margin-top: 12px;
+}
+
+.insurance-in-page .insurance-in-agree > p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.insurance-in-page .insurance-in-agree .c-check {
+  margin: 0;
+}
+
+.insurance-in-page .insurance-in-answer-date {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* MFC012 · 목록 */
+.insurance-in-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* 회원가입(.signup-page .c-tabs)과 동일 톤 */
+.insurance-in-page .insurance-in-sort.c-tabs {
+  width: 100%;
+  margin-bottom: 0;
+  border: 1px solid #e5e7eb;
+}
+
+.insurance-in-page .insurance-in-sort.c-tabs > button {
+  flex: 1;
+  min-height: 36px;
+  height: auto;
+  padding: 6px 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  background: var(--bg);
+  white-space: nowrap;
+}
+
+.insurance-in-page .insurance-in-sort.c-tabs > button[aria-selected='true'] {
+  color: var(--bg);
+  background: #111827;
+}
+
+.insurance-in-toolbar > .btn-line {
+  align-self: flex-end;
+  width: auto;
+  min-height: auto;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+.insurance-in-page .insurance-in-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.insurance-in-page .insurance-in-list + .c-paging {
+  margin-top: 24px;
+  padding-bottom: 4px;
+}
+
+.insurance-in-page .insurance-in-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 18px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.insurance-in-page .insurance-in-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.insurance-in-page .insurance-in-card:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.insurance-in-page .insurance-in-card > h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.38;
+  letter-spacing: -0.02em;
+}
+
+.insurance-in-page .insurance-in-card > p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-sub);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.insurance-in-page .insurance-in-foot {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.insurance-in-page .insurance-in-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
+.insurance-in-page .insurance-in-meta > span + span::before {
+  content: '|';
+  margin-right: 10px;
+  color: var(--border-strong);
+}
+
+.insurance-in-page .insurance-in-author {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-sub);
+  text-align: right;
+}
+
+.insurance-in-page .insurance-in-author > span {
+  color: var(--primary);
+}
+
+/* MFC012_01 · 상세 */
+.insurance-in-detail-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.insurance-in-detail .insurance-in-question {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-sub);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+.insurance-in-detail .insurance-in-question-head {
+  padding: 18px 18px 14px;
+}
+
+.insurance-in-detail .insurance-in-question-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.insurance-in-detail .insurance-in-question-bar .insurance-in-question-label {
+  margin: 0;
+}
+
+.insurance-in-detail .insurance-in-question-actions,
+.insurance-in-detail-box .insurance-in-answer-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+.insurance-in-detail-box .insurance-in-answer-actions {
+  justify-content: flex-end;
+  margin: 0 0 8px;
+}
+
+.insurance-in-detail .insurance-in-question-actions > a,
+.insurance-in-detail .insurance-in-question-actions > button,
+.insurance-in-detail-box .insurance-in-answer-actions > a,
+.insurance-in-detail-box .insurance-in-answer-actions > button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-sub);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.insurance-in-detail .insurance-in-question-actions > a:focus-visible,
+.insurance-in-detail .insurance-in-question-actions > button:focus-visible,
+.insurance-in-detail-box .insurance-in-answer-actions > a:focus-visible,
+.insurance-in-detail-box .insurance-in-answer-actions > button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.insurance-in-detail .insurance-in-question-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.insurance-in-detail .insurance-in-question-head > h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.38;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.insurance-in-detail .insurance-in-question-head > p:not(.insurance-in-meta):not(.insurance-in-question-label) {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-sub);
+}
+
+.insurance-in-detail .insurance-in-question-head > .insurance-in-meta {
+  margin-top: 14px;
+}
+
+.insurance-in-detail .insurance-in-question > .insurance-in-foot {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 16px;
+  margin-top: 0;
+  padding: 12px 18px 14px;
+  border-top: 1px solid var(--border);
+}
+
+.insurance-in-detail .insurance-in-question > .insurance-in-foot .insurance-in-author {
+  align-self: auto;
+  text-align: left;
+}
+
+.insurance-in-detail-box .insurance-in-answers-title {
+  margin: 0 0 16px;
+  padding: 0 0 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.insurance-in-detail-box .insurance-in-answers-title > span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.insurance-in-share {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-sub);
+  cursor: pointer;
+}
+
+.insurance-in-share img {
+  width: 18px;
+  height: 18px;
+}
+
+.insurance-in-share:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.insurance-in-detail-box .insurance-in-answers {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+.insurance-in-detail-box .insurance-in-answer {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.insurance-in-detail-box .insurance-in-answer + .insurance-in-answer {
+  margin-top: 0;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-strong);
+}
+
+.insurance-in-detail-box .insurance-in-answer-text {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-sub);
+}
+
+.insurance-in-detail-box .insurance-in-answer-text > p:last-child {
+  margin: 0;
+}
+
+.insurance-in-detail-box .insurance-in-fc-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.insurance-in-detail-box .insurance-in-fc-actions .btn-line {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: auto;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* FC 프로필 카드 — MFC003 .fc-profile-grid 모바일 레이아웃 공통 */
+.insurance-in-detail-box .insurance-in-answer > .card,
+.insurance-in-answer-page .insurance-in-register > .card {
+  margin: 0;
+  min-height: 0;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+}
+
+.insurance-in-detail-box .insurance-in-answer > .card .card-body,
+.insurance-in-answer-page .insurance-in-register > .card .card-body {
+  padding: 16px 18px;
+}
+
+.insurance-in-detail-box .insurance-in-answer .profile,
+.insurance-in-answer-page .insurance-in-register > .card .profile {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 14px;
+  text-align: left;
+}
+
+.insurance-in-detail-box .insurance-in-answer .profile > div,
+.insurance-in-answer-page .insurance-in-register > .card .profile > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-width: 0;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.insurance-in-detail-box .insurance-in-answer .profile-name,
+.insurance-in-answer-page .insurance-in-register > .card .profile-name {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.insurance-in-detail-box .insurance-in-answer .c-rate,
+.insurance-in-answer-page .insurance-in-register > .card .c-rate {
+  margin: 0 0 4px;
+  text-align: left;
+}
+
+.insurance-in-detail-box .insurance-in-answer .c-dot-line,
+.insurance-in-answer-page .insurance-in-register > .card .c-dot-line {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+}
+
+.insurance-in-detail-box .insurance-in-answer .c-dot-line > span.location,
+.insurance-in-answer-page .insurance-in-register > .card .c-dot-line > span.location {
+  display: inline;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.insurance-in-detail-box .insurance-in-answer .c-dot-line .location > span,
+.insurance-in-answer-page .insurance-in-register > .card .c-dot-line .location > span {
+  display: inline;
+  white-space: nowrap;
+}
+
+.insurance-in-detail-box .insurance-in-answer .c-dot-line .location > span + span,
+.insurance-in-answer-page .insurance-in-register > .card .c-dot-line .location > span + span {
+  margin-left: 0.35em;
+}
+
+.insurance-in-detail-box .insurance-in-answer .list-tags,
+.insurance-in-answer-page .insurance-in-register > .card .list-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  justify-content: flex-start;
+}
+
+.insurance-in-detail-box .insurance-in-answer .list-tags span,
+.insurance-in-answer-page .insurance-in-register > .card .list-tags span {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  min-height: 22px;
+  line-height: 20px;
+  padding: 0 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* MFC012_03 · 답변 등록 */
+.insurance-in-answer-page .insurance-in-register {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.insurance-in-answer-page .insurance-in-register > .card .card-body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px 16px;
+}
+
+.insurance-in-answer-page .insurance-in-register > .card .profile {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.insurance-in-answer-page .insurance-in-register > .card .insurance-in-fc-actions {
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+.insurance-in-answer-page .insurance-in-register > .card .insurance-in-fc-actions .btn-line {
+  min-width: 132px;
+  min-height: auto;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.insurance-in-answer-page .insurance-in-register .form-actions {
+  margin-top: 8px;
+}
+
+@media (max-width: 640px) {
+  .insurance-in-page > main {
+    padding: 24px 16px 48px;
+  }
+
+  .insurance-in-page .insurance-in-sort.c-tabs {
+    overflow-x: auto;
+  }
+
+  .insurance-in-page .insurance-in-sort.c-tabs > button {
+    flex: 0 0 auto;
+    min-width: 96px;
+  }
+
+  .insurance-in-detail .insurance-in-question > .insurance-in-foot {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .insurance-in-detail .insurance-in-question > .insurance-in-foot .insurance-in-share {
+    align-self: flex-end;
+  }
+
+  .insurance-in-detail-box .insurance-in-answer > .card .card-body,
+  .insurance-in-answer-page .insurance-in-register > .card .card-body {
+    padding: 14px 16px;
+  }
+
+  .insurance-in-detail-box .insurance-in-fc-actions {
+    flex-direction: column;
+  }
+
+  .insurance-in-detail-box .insurance-in-fc-actions .btn-line {
+    width: 100%;
+  }
+
+  .insurance-in-answer-page .insurance-in-register > .card .card-body {
+    flex-direction: column;
+  }
+
+  .insurance-in-answer-page .insurance-in-register > .card .insurance-in-fc-actions {
+    width: 100%;
+  }
+
+  .insurance-in-answer-page .insurance-in-register > .card .insurance-in-fc-actions .btn-line {
+    width: 100%;
+    min-width: 0;
+  }
+}
